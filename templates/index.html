@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon sentiment analysis</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class='title'>Amazon review sentiment analysis app</h1>
+    <!--main panel-->
+    <div class='panel'>
+        <p>Enter your review and choose a model to predict:</p>
+
+        <!--Input section: textarea & embedding method-->
+        <form action="{{url_for('predict')}}" method='POST' class='form'>
+            <textarea placeholder="Enter text here..." name='text' class='textbox'></textarea>
+            <br>
+            <select name='mlmodel'>
+                <option value='lgr'>Logistic Regression</option>
+                <option value='svm'>SVM</option>
+            </select>
+            <input type="submit" value="Predict!" class="button"></input>
+        </form>
+
+        <div class='prediction'>
+            <span id ='original-text'>{{entered_text}} {{original_text}}</span>
+            <span id='prediction-text'>{{prediction_text}}</span>
+        </div>
+    </div>
+</body>
+
