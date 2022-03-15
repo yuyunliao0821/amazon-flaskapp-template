@@ -53,23 +53,32 @@ body{
     margin-bottom: 5vh;
 }
 
-.textbox{
+#textbox{
     height: 150px;
     width:70%;
     max-width: 90%;
 }
 
-.prediction{
+#prediction{
+    display: None;
     align-items: center;
-    display: flex;
     flex-direction: column;
     margin:5px 5px;
+
 }
 
 #prediction-text{
     font-size: 25px;
+    color: black;
+    animation-name: example;
+    animation-duration:2s;
 }
 
 #original-text{
     font-size: 16px;
 }
+
+@keyframes example {
+    0%   {color: transparent;}
+    100% {color: black;}
+  }
