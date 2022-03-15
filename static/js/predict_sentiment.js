@@ -14,15 +14,12 @@ function predict_sentiment() {
     'mlmodel':selectedModel
   }]
 
-  $.post({
-    url:"/predict", 
-    data:JSON.stringify(server_data), 
-    contentType:'application/json'}).done(function (data){
-      predictionText.style.display = 'flex';
-      predictionText.innerHTML = data;
-      originalText.innerHTML = inputText;
-    }
-    );
+  //Define ajax request here:
+
+
+
+  //=======================================
+ 
 
   //  $.get("/predict?"+"text="+inputText+"&"+"mlmodel="+selectedModel).done(function (data) {
   //    predictionText.innerHTML = data;
