@@ -11,13 +11,13 @@ function predictSentiment() {
   predictionText.style.display= 'None'
 
   // Create variable for sending request to python
-  var server_data=[{
+  var serverData=[{
     'text':inputText,
     'mlmodel':selectedModel
   }]
 
   //Define ajax request here:
-
+  
 
 
   //=======================================
