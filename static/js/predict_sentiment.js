@@ -1,5 +1,6 @@
-function predict_sentiment() {
+function predictSentiment() {
   
+  // get elements from html DOM
   var inputText = document.getElementById("textbox").value;
   var selectedModel = document.getElementById('ml-model').value;
   var predictionContainer = document.getElementById("prediction");
@@ -9,6 +10,7 @@ function predict_sentiment() {
   predictionContainer.style.display = 'flex';
   predictionText.style.display= 'None'
 
+  // Create variable for sending request to python
   var server_data=[{
     'text':inputText,
     'mlmodel':selectedModel
