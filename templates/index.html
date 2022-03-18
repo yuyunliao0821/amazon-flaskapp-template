@@ -17,17 +17,15 @@
     <div class='panel'>
         <p>Enter your review and choose a model to predict:</p>
 
-        <!--Input section: textarea & prediction method-->
+        <!--Input section: textarea & embedding method-->
         <textarea placeholder="Enter text here..." name='text' id='textbox'></textarea>
         <br>
         <select id='ml-model'>
             <option value='lgr'>Logistic Regression</option>
             <option value='svm'>SVM</option>
         </select>
-        <input type="submit" name="predict" value="Predict!" class="button"
-        onclick="predictSentiment();"></input>
+        <input type="submit" name="predict" value="Predict!" id="button"></input>
 
-        <!--Output section-->
         <div id='prediction'>
             <span id='original-text'></span>
             <span id='prediction-text'></span>
@@ -35,4 +33,5 @@
     </div>
     
 </body>
+
 

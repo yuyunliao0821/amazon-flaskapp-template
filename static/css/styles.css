@@ -22,7 +22,7 @@ body{
 }
 
 
-.button{
+#button{
     height: 35px;
     width: 100px;
     border-radius: 2em;
@@ -35,7 +35,7 @@ body{
     margin:5px 5px ;
 }
 
-.button:hover{
+#button:hover{
     background-color: #E8FFC2;
     transform: translateY(-1.5px);
     box-shadow: 1px 1.5px 1.5px black;
