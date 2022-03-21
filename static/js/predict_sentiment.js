@@ -14,13 +14,16 @@ window.onload = function(){
       'text':inputText,
       'mlmodel':selectedModel
     }]
-  
-    // Define ajax request here:
 
-
-
-
-    //=============================
+    $.post({
+      url:"/predict", 
+      data:JSON.stringify(serverData), 
+      contentType:'application/json'}).done(function (data){
+        predictionText.style.display = 'flex';
+        predictionText.textContent = data;
+        originalText.textContent = inputText;
+      }
+    );
   
     //  $.get("/predict?"+"text="+inputText+"&"+"mlmodel="+selectedModel).done(function (data) {
     //    predictionText.innerHTML = data;
